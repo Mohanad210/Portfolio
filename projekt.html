@@ -36,14 +36,14 @@
             </ul>
         </nav>
     </header>
-          <main id="main-content" class="projects">
+         <main id="main-content" class="projects">
         <h1 class="projects__title">Mina projekt</h1>
         <p class="projects__intro">Under min första termin har jag lärt mig att bygga webbplatser med HTML, CSS och JavaScript, och att versionshantera min kod med Git. Här är några av mina projekt.</p>
 
         <!-- Varje projekt kan stå på egen hand = article -->
         <article class="project-card project-card--featured">
             <h2 class="project-card__title">Receptsajt</h2>
-            <p class="project-card__badge">Senaste projektet</p>
+            <p class="project-card__badge">Utvalt projekt</p>
             <img class="project-card__image" src="images/projekt1.jpg"
                  alt="Grönsaker, svamp, tomater och kryddburkar utlagda på ett träbord"
                  width="600" height="400">
@@ -60,7 +60,25 @@
             <p class="project-card__details" id="details-1" data-js-target="project-details" hidden>
                 Sidan är byggd i HTML och CSS, och när jag gjorde den lärde jag mig att strukturera innehåll med en tydlig rubrikhierarki och med listor.
             </p>
-            <a class="project-card__link" href="https://github.com">Se koden för receptsajten på GitHub</a>
+                        <a class="project-card__link" href="https://github.com/Mohanad210">Fler av mina projekt på GitHub</a>
+        </article>
+
+        <article class="project-card">
+            <h2 class="project-card__title">Beställningsformulär för en pizzeria</h2>
+            <p class="project-card__text">Ett beställningsformulär där man väljer pizza och skickar sin beställning. Servern svarar sedan med en bekräftelse på det man har beställt.</p>
+
+            <!-- JS: När man klickar ska mer information om projektet visas eller döljas.
+                 ACTION: toggle-details, DATA: data-project-id, TARGET: project-details -->
+            <button type="button" class="project-card__action"
+                    aria-expanded="false" aria-controls="details-2"
+                    data-js-action="toggle-details"
+                    data-project-id="2">
+                Visa mer om pizzeriaformuläret
+            </button>
+            <p class="project-card__details" id="details-2" data-js-target="project-details" hidden>
+                Formuläret är byggt med PHP, och jag lärde mig att ta emot formulärdata med $_POST och att skydda sidan mot skadlig kod med htmlspecialchars().
+            </p>
+                        <a class="project-card__link" href="https://github.com/Mohanad210">Fler av mina projekt på GitHub</a>
         </article>
     </main>
               
@@ -68,7 +86,7 @@
         <address class="site-footer__address">
             Mr X<br>
             <a class="site-footer__link" href="mailto:mr.x@example.com">mr.x@example.com</a><br>
-            <a class="site-footer__link" href="https://github.com">Mr X på GitHub</a><br>
+            <a class="site-footer__link" href="https://github.com/Mohanad210/portfolio">Mr X på GitHub</a><br>
             <a class="site-footer__link" href="https://www.linkedin.com">Mr X på LinkedIn</a>
         </address>
 
