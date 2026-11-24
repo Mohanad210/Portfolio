@@ -1,0 +1,59 @@
+/* =========================================================
+   css/style.css – UTSEENDE
+   CSS använder BARA klasser (BEM). Aldrig id, data-js-* eller taggnamn.
+   Reglerna får vara tomma enligt uppgiften.
+   Block = komponent, block__element = del av den, --modifier = variant.
+   ========================================================= */
+
+/* BLOCK: skip-link – hopplänken.
+   Döljs tills man trycker Tab (WCAG 2.4.1 och 2.4.7) */
+.skip-link { position: absolute; left: -9999px; }
+.skip-link:focus { left: 10px; top: 10px; outline: 3px solid #1565c0; }
+
+/* BLOCK: site-header – sidhuvudet */
+.site-header { }
+.site-header__name { }
+
+/* BLOCK: main-nav – huvudmenyn */
+.main-nav { }
+.main-nav__toggle { }
+.main-nav__list { }
+.main-nav__item { }
+.main-nav__link { }
+.main-nav__link--active { }      /* MODIFIER: aktuell sida */
+
+/* BLOCK: about – Om mig */
+.about { }
+.about__title { }
+.about__intro { }
+.about__figure { }
+.about__image { }
+.about__caption { }
+.about__section { }
+.about__subtitle { }
+.about__text { }
+.about__list { }
+.about__item { }
+
+/* BLOCK: skills – Kompetenser */
+.skills { }
+.skills__title { }
+.skills__intro { }
+.skills__section { }
+.skills__subtitle { }
+.skills__list { }
+.skills__item { }
+
+/* BLOCK: skills-table – tabellen över kompetenser */
+.skills-table { }
+.skills-table__caption { }
+.skills-table__heading { }
+.skills-table__cell { }
+
+/* BLOCK: site-footer – sidfoten */
+.site-footer { }
+.site-footer__address { }
+.site-footer__link { }
+.site-footer__action { }
+.site-footer__status { }
+.site-footer__copyright { }
