@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Kompetenser – Mr X, webbutvecklare</title>
+    <meta name="description" content="Se vilka kompetenser Mr X har inom HTML, CSS, JavaScript, PHP och Git.">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+        <a href="#main-content" class="skip-link">Hoppa till huvudinnehållet</a>
+
+    <header class="site-header">
+        <p class="site-header__name">Mr X</p>
+
+        <!-- JS: Knappen visar och döljer menyn på mobilen.
+             ACTION: toggle-menu (vad ska hända)
+             DATA: data-menu-name="main" (vilken meny)
+             TARGET: listan med data-js-target="nav-list" (var det syns) -->
+        <button type="button" class="main-nav__toggle"
+                aria-expanded="true" aria-controls="nav-list"
+                data-js-action="toggle-menu"
+                data-menu-name="main">
+            Meny
+        </button>
+
+        <nav class="main-nav" aria-label="Huvudmeny">
+            <ul class="main-nav__list" id="nav-list" data-js-target="nav-list">
+                <li class="main-nav__item"><a class="main-nav__link" href="index.html">Om mig</a></li>
+                <li class="main-nav__item"><a class="main-nav__link main-nav__link--active" href="kompetenser.html" aria-current="page">Kompetenser</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="projekt.html">Projekt</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="utbildning.html">Utbildning och erfarenhet</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="referenser.html">Referenser</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+        <main id="main-content" class="skills">
+        <h1 class="skills__title">Mina kompetenser</h1>
+        <p class="skills__intro">Under första terminen har jag lärt mig att planera och strukturera mitt arbete på egen hand, och jag har utvecklat både mina ämneskunskaper och min förmåga att samarbeta med andra.</p>
+
+        <section class="skills__section" aria-labelledby="tech-title">
+            <h2 class="skills__subtitle" id="tech-title">Tekniska kompetenser</h2>
+            <table class="skills-table">
+                <caption class="skills-table__caption">Tekniska kompetenser och nivå</caption>
+                <thead>
+                    <tr>
+                        <th scope="col" class="skills-table__heading">Kompetens</th>
+                        <th scope="col" class="skills-table__heading">Nivå</th>
+                        <th scope="col" class="skills-table__heading">Var jag har lärt mig</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row" class="skills-table__heading">HTML</th>
+                        <td class="skills-table__cell">Goda kunskaper</td>
+                        <td class="skills-table__cell">Kursen Webbutveckling</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="skills-table__heading">CSS</th>
+                        <td class="skills-table__cell">Grundläggande</td>
+                        <td class="skills-table__cell">Kursen Webbutveckling</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="skills-table__heading">JavaScript</th>
+                        <td class="skills-table__cell">Grundläggande</td>
+                        <td class="skills-table__cell">Kursen Webbutveckling</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="skills-table__heading">PHP</th>
+                        <td class="skills-table__cell">Nybörjare</td>
+                        <td class="skills-table__cell">Kursen Webbutveckling</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="skills-table__heading">Git och GitHub</th>
+                        <td class="skills-table__cell">Grundläggande</td>
+                        <td class="skills-table__cell">Grupparbeten i kursen</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="skills-table__heading">WCAG</th>
+                        <td class="skills-table__cell">Grundläggande</td>
+                        <td class="skills-table__cell">Kursen Webbutveckling</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="skills__section" aria-labelledby="soft-title">
+            <h2 class="skills__subtitle" id="soft-title">Personliga egenskaper</h2>
+            <ul class="skills__list">
+                <li class="skills__item">Samarbetar bra i grupp</li>
+                <li class="skills__item">Noggrann</li>
+                <li class="skills__item">Lär mig snabbt</li>
+            </ul>
+        </section>
+    </main>
+              
+        <footer class="site-footer">
+        <address class="site-footer__address">
+            Mr X<br>
+            <a class="site-footer__link" href="mailto:mr.x@example.com">mr.x@example.com</a><br>
+            <a class="site-footer__link" href="https://github.com">Mr X på GitHub</a><br>
+            <a class="site-footer__link" href="https://www.linkedin.com">Mr X på LinkedIn</a>
+        </address>
+
+        <!-- JS: När man klickar på knappen ska e-postadressen kopieras.
+             ACTION: copy-email, DATA: data-email, TARGET: copy-status -->
+        <button type="button" class="site-footer__action"
+                data-js-action="copy-email"
+                data-email="mr.x@example.com">
+            Kopiera e-postadressen
+        </button>
+        <p class="site-footer__status" data-js-target="copy-status" aria-live="polite"></p>
+
+        <p class="site-footer__copyright">© 2026 Mr X</p>
+    </footer>
+
+</body>
+</html>
