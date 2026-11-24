@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+           <title>Projekt – Mr X, webbutvecklare</title>
+    <meta name="description" content="Se projekten som Mr X har byggt med HTML, CSS, JavaScript och PHP.">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+        <a href="#main-content" class="skip-link">Hoppa till huvudinnehållet</a>
+
+    <header class="site-header">
+        <p class="site-header__name">Mr X</p>
+
+        <!-- JS: Knappen visar och döljer menyn på mobilen.
+             ACTION: toggle-menu (vad ska hända)
+             DATA: data-menu-name="main" (vilken meny)
+             TARGET: listan med data-js-target="nav-list" (var det syns) -->
+        <button type="button" class="main-nav__toggle"
+                aria-expanded="true" aria-controls="nav-list"
+                data-js-action="toggle-menu"
+                data-menu-name="main">
+            Meny
+        </button>
+
+        <nav class="main-nav" aria-label="Huvudmeny">
+                <ul class="main-nav__list" id="nav-list" data-js-target="nav-list">
+                <li class="main-nav__item"><a class="main-nav__link" href="index.html">Om mig</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="kompetenser.html">Kompetenser</a></li>
+                <li class="main-nav__item"><a class="main-nav__link main-nav__link--active" href="projekt.html" aria-current="page">Projekt</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="utbildning.html">Utbildning och erfarenhet</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="referenser.html">Referenser</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+          <main id="main-content" class="projects">
+        <h1 class="projects__title">Mina projekt</h1>
+        <p class="projects__intro">Under min första termin har jag lärt mig att bygga webbplatser med HTML, CSS och JavaScript, och att versionshantera min kod med Git. Här är några av mina projekt.</p>
+
+        <!-- Varje projekt kan stå på egen hand = article -->
+        <article class="project-card project-card--featured">
+            <h2 class="project-card__title">Receptsajt</h2>
+            <p class="project-card__badge">Senaste projektet</p>
+            <img class="project-card__image" src="images/projekt1.jpg"
+                 alt="Grönsaker, svamp, tomater och kryddburkar utlagda på ett träbord"
+                 width="600" height="400">
+            <p class="project-card__text">En receptsajt där varje recept har en ingredienslista och en numrerad instruktion, så att man kan följa stegen i rätt ordning. Jag använde punktlistor för ingredienserna och numrerade listor för stegen, och rubrikerna delar upp varje recept i tydliga avsnitt.</p>
+
+            <!-- JS: När man klickar ska mer information om projektet visas eller döljas.
+                 ACTION: toggle-details, DATA: data-project-id, TARGET: project-details -->
+            <button type="button" class="project-card__action"
+                    aria-expanded="false" aria-controls="details-1"
+                    data-js-action="toggle-details"
+                    data-project-id="1">
+                Visa mer om receptsajten
+            </button>
+            <p class="project-card__details" id="details-1" data-js-target="project-details" hidden>
+                Sidan är byggd i HTML och CSS, och när jag gjorde den lärde jag mig att strukturera innehåll med en tydlig rubrikhierarki och med listor.
+            </p>
+            <a class="project-card__link" href="https://github.com">Se koden för receptsajten på GitHub</a>
+        </article>
+    </main>
+              
+        <footer class="site-footer">
+        <address class="site-footer__address">
+            Mr X<br>
+            <a class="site-footer__link" href="mailto:mr.x@example.com">mr.x@example.com</a><br>
+            <a class="site-footer__link" href="https://github.com">Mr X på GitHub</a><br>
+            <a class="site-footer__link" href="https://www.linkedin.com">Mr X på LinkedIn</a>
+        </address>
+
+        <!-- JS: När man klickar på knappen ska e-postadressen kopieras.
+             ACTION: copy-email, DATA: data-email, TARGET: copy-status -->
+        <button type="button" class="site-footer__action"
+                data-js-action="copy-email"
+                data-email="mr.x@example.com">
+            Kopiera e-postadressen
+        </button>
+        <p class="site-footer__status" data-js-target="copy-status" aria-live="polite"></p>
+
+        <p class="site-footer__copyright">© 2026 Mr X</p>
+    </footer>
+
+</body>
+</html>
