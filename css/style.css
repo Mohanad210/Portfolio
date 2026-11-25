@@ -93,3 +93,9 @@
 .contact-form__option { }
 .contact-form__counter { }
 .contact-form__submit { }
+
+/* BLOCK: thank-you – svaret i tack.php */
+.thank-you { }
+.thank-you__title { }
+.thank-you__text { }
+.thank-you__link { }
