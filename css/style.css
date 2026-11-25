@@ -128,3 +128,25 @@
 .timeline__title { }
 .timeline__date { }
 .timeline__text { }
+
+/* =========================================================
+   Klickytor minst 24 x 24 px (WCAG 2.5.8 Target Size)
+   Gäller alla länkar och knappar på sidorna.
+   ========================================================= */
+.main-nav__link,
+.site-footer__link,
+.contact-links__link,
+.project-card__link,
+.thank-you__link {
+    display: inline-block;
+    min-height: 24px;
+    padding: 4px 0;
+}
+
+.main-nav__toggle,
+.site-footer__action,
+.project-card__action,
+.contact-form__submit {
+    min-height: 24px;
+    padding: 4px 8px;
+}
