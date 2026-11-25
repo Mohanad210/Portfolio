@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referenser – Mr X, webbutvecklare</title>
+    <meta name="description" content="Läs vad en lärare och en tidigare chef säger om Mr X som kollega och utvecklare.">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+        <a href="#main-content" class="skip-link">Hoppa till huvudinnehållet</a>
+
+    <header class="site-header">
+        <p class="site-header__name">Mr X</p>
+
+        <!-- JS: Knappen visar och döljer menyn på mobilen.
+             ACTION: toggle-menu (vad ska hända)
+             DATA: data-menu-name="main" (vilken meny)
+             TARGET: listan med data-js-target="nav-list" (var det syns) -->
+        <button type="button" class="main-nav__toggle"
+                aria-expanded="true" aria-controls="nav-list"
+                data-js-action="toggle-menu"
+                data-menu-name="main">
+            Meny
+        </button>
+
+        <nav class="main-nav" aria-label="Huvudmeny">
+                <ul class="main-nav__list" id="nav-list" data-js-target="nav-list">
+                <li class="main-nav__item"><a class="main-nav__link" href="index.html">Om mig</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="kompetenser.html">Kompetenser</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="projekt.html">Projekt</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="utbildning.html">Utbildning och erfarenhet</a></li>
+                <li class="main-nav__item"><a class="main-nav__link main-nav__link--active" href="referenser.html" aria-current="page">Referenser</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+                <main id="main-content" class="references">
+        <h1 class="references__title">Referenser</h1>
+        <p class="references__intro">Här kan du läsa vad några av de personer jag har studerat och arbetat med säger om mig.</p>
+
+        <!-- Varje omdöme kan stå på egen hand = article -->
+        <article class="reference-card">
+            <h2 class="reference-card__title">Omdöme från lärare</h2>
+            <blockquote class="reference-card__quote">
+                <p>Mr X är nyfiken och vill alltid förstå hur saker fungerar på riktigt. Han hjälper gärna sina klasskamrater när de kör fast, och det gör hela gruppen bättre.</p>
+            </blockquote>
+            <p class="reference-card__author">Anna Lind, lärare i webbutveckling</p>
+        </article>
+
+        <article class="reference-card">
+            <h2 class="reference-card__title">Omdöme från tidigare chef</h2>
+            <blockquote class="reference-card__quote">
+                <p>Mr X är pålitlig och kommer alltid i tid. Han är bra med kunderna och tar hand om dem på ett vänligt och lugnt sätt.</p>
+            </blockquote>
+            <p class="reference-card__author">Erik Holm, butikschef</p>
+        </article>
+    </main>
+              
+        <footer class="site-footer">
+        <address class="site-footer__address">
+            Mr X<br>
+            <a class="site-footer__link" href="mailto:mr.x@example.com">mr.x@example.com</a><br>
+            <a class="site-footer__link" href="https://github.com/Mohanad210/portfolio">Mr X på GitHub</a><br>
+            <a class="site-footer__link" href="https://www.linkedin.com">Mr X på LinkedIn</a>
+        </address>
+
+        <!-- JS: När man klickar på knappen ska e-postadressen kopieras.
+             ACTION: copy-email, DATA: data-email, TARGET: copy-status -->
+        <button type="button" class="site-footer__action"
+                data-js-action="copy-email"
+                data-email="mr.x@example.com">
+            Kopiera e-postadressen
+        </button>
+        <p class="site-footer__status" data-js-target="copy-status" aria-live="polite"></p>
+
+        <p class="site-footer__copyright">© 2026 Mr X</p>
+    </footer>
+
+</body>
+</html>

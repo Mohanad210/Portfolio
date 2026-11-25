@@ -57,3 +57,14 @@
 .site-footer__action { }
 .site-footer__status { }
 .site-footer__copyright { }
+
+/* BLOCK: references – Referenser */
+.references { }
+.references__title { }
+.references__intro { }
+
+/* BLOCK: reference-card – ett omdöme */
+.reference-card { }
+.reference-card__title { }
+.reference-card__quote { }
+.reference-card__author { }
