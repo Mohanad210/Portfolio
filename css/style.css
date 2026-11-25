@@ -99,3 +99,32 @@
 .thank-you__title { }
 .thank-you__text { }
 .thank-you__link { }
+
+/* BLOCK: projects – Projekt */
+.projects { }
+.projects__title { }
+.projects__intro { }
+
+/* BLOCK: project-card – ett projektkort */
+.project-card { }
+.project-card--featured { }      /* MODIFIER: utvalt projekt */
+.project-card__title { }
+.project-card__badge { }
+.project-card__image { }
+.project-card__text { }
+.project-card__action { }
+.project-card__details { }
+.project-card__link { }
+
+/* BLOCK: resume – Utbildning och erfarenhet */
+.resume { }
+.resume__title { }
+.resume__section { }
+.resume__subtitle { }
+
+/* BLOCK: timeline – en lista med händelser i tidsordning */
+.timeline { }
+.timeline__item { }
+.timeline__title { }
+.timeline__date { }
+.timeline__text { }
