@@ -68,3 +68,28 @@
 .reference-card__title { }
 .reference-card__quote { }
 .reference-card__author { }
+
+/* BLOCK: contact – Kontakt */
+.contact { }
+.contact__title { }
+
+/* BLOCK: contact-links – kontaktlänkar */
+.contact-links { }
+.contact-links__title { }
+.contact-links__list { }
+.contact-links__item { }
+.contact-links__link { }
+
+/* BLOCK: contact-form – kontaktformuläret */
+.contact-form { }
+.contact-form__title { }
+.contact-form__form { }
+.contact-form__field { }
+.contact-form__label { }
+.contact-form__input { }
+.contact-form__input--large { }  /* MODIFIER: högre textruta */
+.contact-form__fieldset { }
+.contact-form__legend { }
+.contact-form__option { }
+.contact-form__counter { }
+.contact-form__submit { }

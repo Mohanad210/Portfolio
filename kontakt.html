@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt – Mr X, webbutvecklare</title>
+    <meta name="description" content="Kontakta Mr X via e-post, GitHub eller LinkedIn, eller skicka ett meddelande via formuläret.">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+        <a href="#main-content" class="skip-link">Hoppa till huvudinnehållet</a>
+
+    <header class="site-header">
+        <p class="site-header__name">Mr X</p>
+
+        <!-- JS: Knappen visar och döljer menyn på mobilen.
+             ACTION: toggle-menu (vad ska hända)
+             DATA: data-menu-name="main" (vilken meny)
+             TARGET: listan med data-js-target="nav-list" (var det syns) -->
+        <button type="button" class="main-nav__toggle"
+                aria-expanded="true" aria-controls="nav-list"
+                data-js-action="toggle-menu"
+                data-menu-name="main">
+            Meny
+        </button>
+
+        <nav class="main-nav" aria-label="Huvudmeny">
+                            <ul class="main-nav__list" id="nav-list" data-js-target="nav-list">
+                <li class="main-nav__item"><a class="main-nav__link" href="index.html">Om mig</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="kompetenser.html">Kompetenser</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="projekt.html">Projekt</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="utbildning.html">Utbildning och erfarenhet</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="referenser.html">Referenser</a></li>
+                <li class="main-nav__item"><a class="main-nav__link main-nav__link--active" href="kontakt.html" aria-current="page">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+                    <main id="main-content" class="contact">
+        <h1 class="contact__title">Kontakta mig</h1>
+
+        <section class="contact-links" aria-labelledby="links-title">
+            <h2 class="contact-links__title" id="links-title">Hitta mig</h2>
+            <ul class="contact-links__list">
+                <li class="contact-links__item"><a class="contact-links__link" href="mailto:mr.x@example.com">Mejla Mr X</a></li>
+                <li class="contact-links__item"><a class="contact-links__link" href="https://www.linkedin.com">Mr X på LinkedIn</a></li>
+                <li class="contact-links__item"><a class="contact-links__link" href="https://github.com/Mohanad210">Mr X på GitHub</a></li>
+            </ul>
+        </section>
+
+        <section class="contact-form" aria-labelledby="form-title">
+            <h2 class="contact-form__title" id="form-title">Skicka ett meddelande</h2>
+
+            <!-- action = VART datan skickas, method = HUR (post för personuppgifter) -->
+            <form class="contact-form__form" action="tack.php" method="post">
+
+                <p class="contact-form__field">
+                    <label class="contact-form__label" for="name">Ditt namn</label>
+                    <input class="contact-form__input" type="text" id="name" name="name" autocomplete="name" required>
+                </p>
+
+                <p class="contact-form__field">
+                    <label class="contact-form__label" for="email">Din e-postadress</label>
+                    <input class="contact-form__input" type="email" id="email" name="email" autocomplete="email" required>
+                </p>
+
+                <p class="contact-form__field">
+                    <label class="contact-form__label" for="subject">Ärende</label>
+                    <select class="contact-form__input" id="subject" name="subject" required>
+                        <option value="">Välj ärende</option>
+                        <option value="Jobberbjudande">Jobberbjudande</option>
+                        <option value="Samarbete">Samarbete</option>
+                        <option value="Fråga">Fråga</option>
+                    </select>
+                </p>
+
+                <fieldset class="contact-form__fieldset">
+                    <legend class="contact-form__legend">Typ av tjänst</legend>
+                    <p class="contact-form__option">
+                        <input type="radio" id="type-full" name="job_type" value="Heltid" required>
+                        <label for="type-full">Heltid</label>
+                    </p>
+                    <p class="contact-form__option">
+                        <input type="radio" id="type-part" name="job_type" value="Deltid">
+                        <label for="type-part">Deltid</label>
+                    </p>
+                    <p class="contact-form__option">
+                        <input type="radio" id="type-intern" name="job_type" value="Praktik">
+                        <label for="type-intern">Praktik</label>
+                    </p>
+                </fieldset>
+
+                <!-- JS: När man skriver i rutan ska antal tecken visas.
+                     ACTION: count-characters, DATA: data-max-length, TARGET: char-count -->
+                <p class="contact-form__field">
+                    <label class="contact-form__label" for="message">Meddelande</label>
+                    <textarea class="contact-form__input contact-form__input--large"
+                              id="message" name="message" rows="5" maxlength="500"
+                              data-js-action="count-characters"
+                              data-max-length="500"></textarea>
+                </p>
+                <p class="contact-form__counter" data-js-target="char-count" aria-live="polite">0 av 500 tecken</p>
+
+                <button class="contact-form__submit" type="submit">Skicka meddelande</button>
+            </form>
+        </section>
+    </main>
+              
+        <footer class="site-footer">
+        <address class="site-footer__address">
+            Mr X<br>
+            <a class="site-footer__link" href="mailto:mr.x@example.com">mr.x@example.com</a><br>
+            <a class="site-footer__link" href="https://github.com/Mohanad210/portfolio"Koden till portfolion på GitHub</a><br>
+            <a class="site-footer__link" href="https://www.linkedin.com">Mr X på LinkedIn</a>
+        </address>
+
+        <!-- JS: När man klickar på knappen ska e-postadressen kopieras.
+             ACTION: copy-email, DATA: data-email, TARGET: copy-status -->
+        <button type="button" class="site-footer__action"
+                data-js-action="copy-email"
+                data-email="mr.x@example.com">
+            Kopiera e-postadressen
+        </button>
+        <p class="site-footer__status" data-js-target="copy-status" aria-live="polite"></p>
+
+        <p class="site-footer__copyright">© 2026 Mr X</p>
+    </footer>
+
+</body>
+</html>
