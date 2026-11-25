@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Utbildning och erfarenhet – Mr X, webbutvecklare</title>
+    <meta name="description" content="Läs om utbildningen och arbetslivserfarenheten som Mr X har inom webbutveckling och service.">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+        <a href="#main-content" class="skip-link">Hoppa till huvudinnehållet</a>
+
+    <header class="site-header">
+        <p class="site-header__name">Mr X</p>
+
+        <!-- JS: Knappen visar och döljer menyn på mobilen.
+             ACTION: toggle-menu (vad ska hända)
+             DATA: data-menu-name="main" (vilken meny)
+             TARGET: listan med data-js-target="nav-list" (var det syns) -->
+        <button type="button" class="main-nav__toggle"
+                aria-expanded="true" aria-controls="nav-list"
+                data-js-action="toggle-menu"
+                data-menu-name="main">
+            Meny
+        </button>
+
+        <nav class="main-nav" aria-label="Huvudmeny">
+                <ul class="main-nav__list" id="nav-list" data-js-target="nav-list">
+                <li class="main-nav__item"><a class="main-nav__link" href="index.html">Om mig</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="kompetenser.html">Kompetenser</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="projekt.html">Projekt</a></li>
+                <li class="main-nav__item"><a class="main-nav__link main-nav__link--active" href="utbildning.html" aria-current="page">Utbildning och erfarenhet</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="referenser.html">Referenser</a></li>
+                <li class="main-nav__item"><a class="main-nav__link" href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+            <main id="main-content" class="resume">
+        <h1 class="resume__title">Utbildning och erfarenhet</h1>
+
+        <section class="resume__section" aria-labelledby="education-title">
+            <h2 class="resume__subtitle" id="education-title">Utbildning</h2>
+            <ol class="timeline">
+                <li class="timeline__item">
+                    <h3 class="timeline__title">Webbutveckling, Högskolan Dalarna</h3>
+                    <p class="timeline__date"><time datetime="2026">2026</time>–<time datetime="2029">2029</time></p>
+                    <p class="timeline__text">Jag läser HTML, CSS, JavaScript och PHP och lär mig hur man bygger webbplatser som är tillgängliga för alla.</p>
+                </li>
+                <li class="timeline__item">
+                    <h3 class="timeline__title">Teknikprogrammet, gymnasiet i Falun</h3>
+                    <p class="timeline__date"><time datetime="2018">2018</time>–<time datetime="2021">2021</time></p>
+                    <p class="timeline__text">Jag lärde mig matematik, teknik och grunderna i programmering, och det var där jag först blev intresserad av att skapa saker med kod.</p>
+                </li>
+            </ol>
+        </section>
+
+        <section class="resume__section" aria-labelledby="work-title">
+            <h2 class="resume__subtitle" id="work-title">Arbetslivserfarenhet</h2>
+            <ol class="timeline">
+                <li class="timeline__item">
+                    <h3 class="timeline__title">Butiksbiträde, livsmedelsbutik i Falun</h3>
+                    <p class="timeline__date"><time datetime="2021">2021</time>–<time datetime="2026">2026</time></p>
+                    <p class="timeline__text">Jag arbetade i kassan, hjälpte kunder och skötte beställningar av varor.</p>
+                </li>
+                <li class="timeline__item">
+                    <h3 class="timeline__title">Fritidsledare, sommarjobb</h3>
+                    <p class="timeline__date"><time datetime="2020">2020</time></p>
+                    <p class="timeline__text">Jag planerade och ledde aktiviteter för barn mellan 7 och 12 år.</p>
+                </li>
+            </ol>
+        </section>
+    </main>
+              
+        <footer class="site-footer">
+        <address class="site-footer__address">
+            Mr X<br>
+            <a class="site-footer__link" href="mailto:mr.x@example.com">mr.x@example.com</a><br>
+            <a class="site-footer__link" href="https://github.com/Mohanad210/portfolio">Mr X på GitHub</a><br>
+            <a class="site-footer__link" href="https://www.linkedin.com">Mr X på LinkedIn</a>
+        </address>
+
+        <!-- JS: När man klickar på knappen ska e-postadressen kopieras.
+             ACTION: copy-email, DATA: data-email, TARGET: copy-status -->
+        <button type="button" class="site-footer__action"
+                data-js-action="copy-email"
+                data-email="mr.x@example.com">
+            Kopiera e-postadressen
+        </button>
+        <p class="site-footer__status" data-js-target="copy-status" aria-live="polite"></p>
+
+        <p class="site-footer__copyright">© 2026 Mr X</p>
+    </footer>
+
+</body>
+</html>
